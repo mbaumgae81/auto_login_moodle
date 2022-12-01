@@ -7,6 +7,7 @@ Dafür habe ich einmal:
 apt update && apt upgrade -y
 
 apt install openjdk-11-jre
+
 Ausgeführt als sudo oder eben root.
 
 unter /opt/login habe ich die fertige .jar reinkopiert und die 2 Shell scripte erstellt
