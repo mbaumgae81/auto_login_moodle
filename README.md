@@ -4,9 +4,9 @@ Und die Zeiterfassung startet.
 Ich habe das ganze auf einem Debian System lauffen.
 Dafür habe ich einmal:
 
-apt update && apt upgrade -y
+<sub>apt update && apt upgrade -y </sub>
 
-apt install openjdk-11-jre
+<sub>apt install openjdk-11-jre </sub>
 
 Ausgeführt als sudo oder eben root.
 
@@ -14,7 +14,7 @@ unter /opt/login habe ich die fertige .jar reinkopiert und die 2 Shell scripte e
 ![opt_ordner](https://user-images.githubusercontent.com/7016905/205121815-e3798539-589c-47cb-8e73-353cd88ad15c.jpg)
 
 und die 2 Shell scripte erstellt. Login müssen folgende Parameter übergeben werden.
-" Login.jar benutzername@meineemail.de meinPAsswort zustand"
+<sub> Login.jar benutzername@meineemail.de meinPAsswort zustand </sub>
 zustand entsprich EIN zum Starten der Zeiterfassung
               und AUS zum Beenden der Zeiterfassung.
 ![login_out](https://user-images.githubusercontent.com/7016905/205121812-e27d5c6e-10f1-46d6-8189-18100c181ba5.jpg)
