@@ -1,4 +1,15 @@
+
+/**
+ *
+ *  @ author M.Baumgärtner
+ *
+ *
+ */
+
+
+
 package autolog;
+
 
 import dev.failsafe.internal.util.Assert;
 import net.sourceforge.htmlunit.corejs.javascript.serialize.ScriptableOutputStream;
@@ -37,7 +48,7 @@ public class Main extends HtmlUnitDriver {
 
 		int random = (int) (Math.random() * 1000 + 1);
 		waitTime = random;
-		waitTime *= 100;
+		waitTime *= 300;
 		WebDriver driver = new HtmlUnitDriver();
 		String page_source = driver.getPageSource();
 		// ------> alles gesetzt
@@ -113,7 +124,7 @@ public class Main extends HtmlUnitDriver {
 
 
 		} else
-			System.out.println("Falscher Parameter üebrgeben");
+			System.out.println("Falscher Parameter übrgeben");
 
 		System.out.println("---------------------------------------------------------------------");
 
