@@ -14,7 +14,7 @@ unter /opt/login habe ich die fertige .jar reinkopiert und die 2 Shell scripte e
 ![opt_ordner](https://user-images.githubusercontent.com/7016905/205121815-e3798539-589c-47cb-8e73-353cd88ad15c.jpg)
 
 und die 2 Shell scripte erstellt. Login müssen folgende Parameter übergeben werden.
-<sup> Login.jar benutzername@meineemail.de meinPAsswort zustand </sup>
+ ***Login.jar benutzername@meineemail.de meinPAsswort zustand***
 zustand entsprich EIN zum Starten der Zeiterfassung
               und AUS zum Beenden der Zeiterfassung.
 ![login_out](https://user-images.githubusercontent.com/7016905/205121812-e27d5c6e-10f1-46d6-8189-18100c181ba5.jpg)
