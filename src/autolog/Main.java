@@ -59,7 +59,7 @@ public class Main extends HtmlUnitDriver {
 		Logger logger = Logger.getLogger("");
 		logger.setLevel(Level.OFF);
 		System.out.println("---------------------" + formattedDate + "------------------------------");
-		System.out.println("Zufällige warte zeit: " + waitTime/1000 +"sekunden");
+		System.out.println("Zufällige warte zeit: " + waitTime/1000 +" sekunden");
 		Thread.sleep(waitTime);
 
 
@@ -89,7 +89,7 @@ public class Main extends HtmlUnitDriver {
 			page_source = driver.getPageSource();		// Lade Page
 			if (page_source.contains(searchAStarten)){	//Wenn Seach Starten gefunden wird
 				System.out.println("Starte Zeit\n");
-				//driver.get("https://lernplattform.gfn.de/?starten=1");
+				driver.get("https://lernplattform.gfn.de/?starten=1");
 				Thread.sleep(1000);
 				// Prüfe ob erfoglreich
 				page_source = driver.getPageSource();
@@ -107,7 +107,7 @@ public class Main extends HtmlUnitDriver {
 			if (page_source.contains(searchStartz)){
 				System.out.println("Stoppe Zeit");
 				System.out.println("Page title is: " + driver.getTitle());
-				//driver.get("https://lernplattform.gfn.de/?stoppen=1");
+				driver.get("https://lernplattform.gfn.de/?stoppen=1");
 				Thread.sleep(1000);
 				// Prüfe ob erfoglreich
 				page_source = driver.getPageSource();
