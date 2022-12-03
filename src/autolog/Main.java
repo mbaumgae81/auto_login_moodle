@@ -1,9 +1,7 @@
 
-/**
+/*
  *
  *  @ author M.Baumgärtner
- *
- *
  */
 
 
@@ -11,16 +9,12 @@
 package autolog;
 
 
-import dev.failsafe.internal.util.Assert;
-import net.sourceforge.htmlunit.corejs.javascript.serialize.ScriptableOutputStream;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,7 +27,7 @@ public class Main extends HtmlUnitDriver {
 		LocalDateTime myObj = LocalDateTime.now(); // Create a date object
 		DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 		String formattedDate = myObj.format(myFormatObj);
-		String searchKeinunterricht = "Heute kein Unterricht!";
+	//	String searchKeinunterricht = "Heute kein Unterricht!";
 		String searchAStarten = "Achtung bitte Zeiterfassung starten!";
 		String searchStartz = "Startzeit";
 		String searchEndz= "Endzeit";
@@ -41,16 +35,14 @@ public class Main extends HtmlUnitDriver {
 		String argu_1 = "null";
 		String argu_2 = "null";
 		String argu_3 = "null";
-		boolean debug = false;
-		int laenge = 0;
-		int waitTime = 0;
-		laenge = argv.length;
+		//int laenge = 0;
+		//int waitTime = 0;
+		int laenge = argv.length;
 
-		int random = (int) (Math.random() * 1000 + 1);
-		waitTime = random;
+		int waitTime = (int) (Math.random() * 1000 );
 		waitTime *= 300;
 		WebDriver driver = new HtmlUnitDriver();
-		String page_source = driver.getPageSource();
+		String page_source; // = driver.getPageSource();
 		// ------> alles gesetzt
 
 		if (laenge >= 3) {
@@ -66,10 +58,11 @@ public class Main extends HtmlUnitDriver {
 		// Disable CSS errors
 		Logger logger = Logger.getLogger("");
 		logger.setLevel(Level.OFF);
-		//
+		System.out.println("---------------------" + formattedDate + "------------------------------");
+		System.out.println("Zufällige warte zeit: " + waitTime/1000 +"sekunden");
 		Thread.sleep(waitTime);
 
-		System.out.println("---------------------" + formattedDate + "------------------------------");
+
 		driver.get("https://lernplattform.gfn.de/login/index.php");
 
 		System.out.println("Page title is: " + driver.getTitle());
@@ -96,13 +89,16 @@ public class Main extends HtmlUnitDriver {
 			page_source = driver.getPageSource();		// Lade Page
 			if (page_source.contains(searchAStarten)){	//Wenn Seach Starten gefunden wird
 				System.out.println("Starte Zeit\n");
-				driver.get("https://lernplattform.gfn.de/?starten=1");
+				//driver.get("https://lernplattform.gfn.de/?starten=1");
 				Thread.sleep(1000);
 				// Prüfe ob erfoglreich
 				page_source = driver.getPageSource();
 				if (page_source.contains(searchStartz)){
 					System.out.println("Anmeldung erfolgt");
 				}
+			}
+			else {
+				System.out.println(" Heute Keine Unterricht.");
 			}
 
 		} else if (argu_3.equalsIgnoreCase("AUS")) {
@@ -111,7 +107,7 @@ public class Main extends HtmlUnitDriver {
 			if (page_source.contains(searchStartz)){
 				System.out.println("Stoppe Zeit");
 				System.out.println("Page title is: " + driver.getTitle());
-				driver.get("https://lernplattform.gfn.de/?stoppen=1");
+				//driver.get("https://lernplattform.gfn.de/?stoppen=1");
 				Thread.sleep(1000);
 				// Prüfe ob erfoglreich
 				page_source = driver.getPageSource();
@@ -119,6 +115,9 @@ public class Main extends HtmlUnitDriver {
 					System.out.println("Abmeldung erfolgt");
 				}
 
+			}
+			else {
+				System.out.println(" Heute Keine Unterricht.");
 			}
 
 
