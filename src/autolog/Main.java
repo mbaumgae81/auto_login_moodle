@@ -39,7 +39,7 @@ public class Main extends HtmlUnitDriver {
 		//int waitTime = 0;
 		int laenge = argv.length;
 
-		int waitTime = (int) (Math.random() * 1000 );
+		int waitTime = (int) (Math.random() * 1000 +1 );
 		waitTime *= 300;
 		WebDriver driver = new HtmlUnitDriver();
 		String page_source; // = driver.getPageSource();
