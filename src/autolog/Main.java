@@ -35,11 +35,10 @@ public class Main extends HtmlUnitDriver {
 		String argu_1 = "null";
 		String argu_2 = "null";
 		String argu_3 = "null";
-		//int laenge = 0;
-		//int waitTime = 0;
+
 		int laenge = argv.length;
 
-		int waitTime = (int) (Math.random() * 1000 );
+		int waitTime = (int) (Math.random() * 1000 +1 );
 		waitTime *= 300;
 		WebDriver driver = new HtmlUnitDriver();
 		String page_source; // = driver.getPageSource();
@@ -65,7 +64,7 @@ public class Main extends HtmlUnitDriver {
 
 		driver.get("https://lernplattform.gfn.de/login/index.php");
 
-		System.out.println("Page title is: " + driver.getTitle());
+		System.out.println("Page title is: " + driver.getTitle());	// gebe aktuellen webnseiten title aus
 
 		driver.findElement(By.id("username")).sendKeys(argu_1); // Find and enter in Username Field
 		Thread.sleep(1000);
