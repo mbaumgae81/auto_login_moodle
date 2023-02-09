@@ -1,7 +1,7 @@
 # auto_login_moodle
-Java Programm das mit hilfe des Users und Passwortes gestartet werden kann und sich auf eine ebseite einloggt. 
+Java Programm das mit hilfe des Users und Passwortes gestartet werden kann und sich auf eine Webseite einloggt. 
 Und die Zeiterfassung startet.
-Ich habe das ganze auf einem Debian System lauffen.
+Ich habe das ganze auf einem Debian System laufen.
 Dafür habe ich einmal:
 
 <sup>apt update && apt upgrade -y </sup>
@@ -10,7 +10,7 @@ Dafür habe ich einmal:
 
 Ausgeführt als sudo oder eben root.
 
-unter /opt/login habe ich die fertige .jar reinkopiert und die 2 Shell scripte erstellt
+unter /opt/login habe ich die fertige .jar reinkopiert ( ist fertig Kompiliert unter /bin im Repository) und die 2 Shell scripte erstellt
 ![opt_ordner](https://user-images.githubusercontent.com/7016905/205121815-e3798539-589c-47cb-8e73-353cd88ad15c.jpg)
 
 und die 2 Shell scripte erstellt. Login müssen folgende Parameter übergeben werden.
