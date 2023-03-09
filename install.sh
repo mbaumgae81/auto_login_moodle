@@ -37,5 +37,7 @@ echo " siehe /etc/crontab hier können auch zeitliche änderungen eingetragen we
 chmod 644 /opt/login/login.sh
 chmod 644 /opt/login/logout.sh
 
-
+echo ""
+echo "Bitte Neustarten damit alle Variablen Für JAva übernommen werden."
+echo ""
 
