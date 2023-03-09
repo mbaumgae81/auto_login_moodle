@@ -2,18 +2,18 @@
 # Installations Script für Moodle Auto Login
 clear
 echo " Prüfe ob auch als Root angemeldet"
-echo.
+echo ""
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
 fi
 echo "Installatios Script für Moodle Auto login"
-echo.
-echo.
+echo""
+echo""
 read -p 'Benutzername für Moodle anmeldung eingeben:  ' VAR_USER
-echo.
+echo""
 read -p 'Moodle Passwort eingeben:  ' VAR_PW 
-echo.
+echo""
 echo " System wird aktualisiert und notwendige Pakete installiert."
 
 
@@ -21,7 +21,7 @@ apt-get update && apt-get upgrade -y
 apt-get install  openjdk-11-jre mc -y
 mkdir /opt/login
 wget https://github.com/mbaumgae81/auto_login_moodle/raw/master/bin/Login.jar -P /opt/login/
-echo.
+echo""
 echo "Erzeuge Scripts"
 echo " #!/bin/sh" >> /opt/login/login.sh
 echo " #!/bin/sh" >> /opt/login/logut.sh
