@@ -1,8 +1,10 @@
 #!/bin/bash
-if (whoami != root)
-  then echo "Please run as root"
 
-  else (
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
 read -p 'Benutzername für Moodle anmeldung eingeben: ' VAR_USER
 read -p 'Moodle Passwort eingeben' VAR_PW 
 
@@ -23,6 +25,6 @@ echo " 30 16	* * mon,tue,wed,thu,fri root /opt/login/logout.sh >> /var/log/jaav.
 echo " 12 08	* * mon,tue,wed,thu,fri root /opt/login/login.sh >> /var/log/jaav.log  2>&1" >> /opt/login/crontab
 chmod 644 /opt/login/login.sh
 chmod 644 /opt/login/logout.sh
-)
 
-fi
+
+
