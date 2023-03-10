@@ -35,8 +35,8 @@ echo "12 08	* * mon,tue,wed,thu,fri root /opt/login/login.sh >> /var/log/jaav.lo
 echo ""
 echo " Scripte werden ab sofort via Crontab gestartet"
 echo " siehe /etc/crontab hier können auch zeitliche änderungen eingetragen werden. "
-chmod 644 /opt/login/login.sh
-chmod 644 /opt/login/logout.sh
+chmod 744 /opt/login/login.sh
+chmod 744 /opt/login/logout.sh
 
 echo ""
 echo "Bitte Neustarten damit alle Variablen Für Java übernommen werden."
