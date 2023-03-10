@@ -8,11 +8,11 @@ Ich habe es getestet auf einem Debian Bullseye minimal installation, während de
 
 Nach der minimal Installation von debian sollte mit folgendem befehl das Installationsscript heruntergeladen werden.
 
-<sup>wget https://raw.githubusercontent.com/mbaumgae81/auto_login_moodle/master/install.sh</sup>
+    wget https://raw.githubusercontent.com/mbaumgae81/auto_login_moodle/master/install.sh
 
 Und anschlißend mit root rechten, das script starten.
 
-<sup>sh ./install.sh</sup>
+    sh ./install.sh
 
 ## Was macht das Installationsscript ?
 
