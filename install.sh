@@ -24,10 +24,11 @@ mkdir /opt/login
 wget https://github.com/mbaumgae81/auto_login_moodle/raw/master/bin/Login.jar -P /opt/login/
 echo ""
 echo "Erzeuge Scripts"
-echo " #!/bin/sh" >> /opt/login/login.sh
-echo " #!/bin/sh" >> /opt/login/logout.sh
-
+echo ""
+echo "#!/bin/sh" >> /opt/login/login.sh
 echo "java -jar /opt/login/Login.jar $VAR_USER $VAR_PW EIN" >> /opt/login/login.sh
+
+echo "#!/bin/sh" >> /opt/login/logout.sh
 echo "java -jar /opt/login/Login.jar $VAR_USER $VAR_PW AUS" >> /opt/login/logout.sh
 
 echo "30 16	* * mon,tue,wed,thu,fri root /opt/login/logout.sh >> /var/log/jaav.log  2>&1" >> /etc/crontab
