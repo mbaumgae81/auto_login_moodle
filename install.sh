@@ -3,8 +3,9 @@
 clear
 echo " Prüfe ob auch als Root angemeldet"
 echo ""
-if [ "$EUID" -ne 0 ];
-  then echo "Please run as root"
+if [ $(whoami) = 'root' ];
+  then echo "Root checked . . "
+  else echo " Youd need root permission!"
   exit
 fi
 echo "Installatios Script für Moodle Auto login"
